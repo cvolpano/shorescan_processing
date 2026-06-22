@@ -1,0 +1,2 @@
+# Ignore NetCDF data files
+*.nc
