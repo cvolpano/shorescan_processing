@@ -1,0 +1,30 @@
+{
+    "CACO03": {
+        "c1": {
+            "reverse_flag": false,
+            "coordinate_files": {
+                "2025-01-23T00:00:00|2025-12-31T00:00:00": "CACO03_c1_timestack_20250123.pix"
+            }
+        },
+        "c2": {
+            "reverse_flag": false,
+            "coordinate_files": {
+                "2025-01-23T00:00:00|2025-12-31T00:00:00":  "CACO03_c2_timestack_20250123.pix"
+            }
+        }
+    },
+    "CACO04": {
+        "c1": {
+            "reverse_flag": false,
+            "coordinate_files": {
+                "2025-01-23T00:00:00|2025-12-31T00:00:00": "CACO04_c1_timestack_20250123.pix"
+            }
+        },
+        "c2": {
+            "reverse_flag": false,
+            "coordinate_files": {
+                "2025-01-23T00:00:00|2025-12-31T00:00:00": "CACO04_c2_timestack_20250123.pix"
+            }
+        }
+    }
+}

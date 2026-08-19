@@ -1,0 +1,75 @@
+name: shorescan
+channels:
+  - conda-forge
+
+dependencies:
+  - python=3.10
+
+  # --- CORE SCIENCE STACK ---
+  - numpy=1.24.*
+  - scipy
+  - pandas
+  - xarray
+  - netcdf4
+  - hdf5
+
+  # --- GEOSPATIAL ---
+  - pyproj
+  - shapely
+  - pyshp
+  - cartopy
+  - utm
+
+  # --- IMAGE / CV ---
+  - opencv
+  - scikit-image
+  - pillow
+  - tifffile
+
+  # --- ML UTILITIES ---
+  - scikit-learn
+  - matplotlib
+  - tqdm
+  - joblib
+
+  # --- REMOVE ALL CUDA 12.x CONDA PACKAGES (IMPORTANT) ---
+  # DO NOT include:
+  # cuda*
+  # libcublas*
+  # libcusparse*
+  # cudatoolkit=12.4 ❌
+
+  # --- KEEP MINIMAL SYSTEM ---
+  - pip
+
+  - pip:
+      # =========================
+      # PYTORCH (CUDA 11.8)
+      # =========================
+      - torch==2.2.2+cu118
+      - torchvision==0.17.2+cu118
+      - torchaudio==2.2.2+cu118
+      - --index-url https://download.pytorch.org/whl/cu118
+
+      # =========================
+      # TENSORFLOW (CUDA 11.8 compatible)
+      # =========================
+      - tensorflow==2.12.*
+      - tensorflow-estimator==2.12.0
+      - keras==2.12.0
+
+      # =========================
+      # HF / ONNX
+      # =========================
+      - transformers==4.37.2
+      - huggingface-hub
+      - safetensors
+      - onnx
+
+      # =========================
+      # GIS / UTILITIES
+      # =========================
+      - pyexiftool
+      - pyyaml
+      - requests
+      - utm
