@@ -1,0 +1,9 @@
+TWL&CC forecast time series (USGS/NOAA TWL Viewer)
+Created 2026-11-02 by twl_json_to_timeseries.py from 95 files
+Elevations (twl*, tideWindSetup, setup, runup*, swash, incSwash,
+  infragSwash): metres. twl*, tideWindSetup: NAVD88, as delivered.
+hs: m; pp: peak period, s.
+valid_time_utc: UTC (source dateTime is GMT).
+valid_time_local: America/New_York with explicit UTC offset (EST/EDT).
+lead_hours: hours after 00:00 UTC on the forecast file's date.
+Best-estimate gaps (no forecast available): 0 h

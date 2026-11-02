@@ -99,6 +99,9 @@ def validate_lat_lon(lat, lon):
             raise ValueError("Longitude must be between -180 and 180.")
     return lat, lon
 
+import requests
+import time
+
 
 def make_request_with_retry(url, params=None):
     """
@@ -110,17 +113,16 @@ def make_request_with_retry(url, params=None):
         response = requests.get(url, params=params)
         if response.status_code == 429:
             # Get the retry delay from the X-Retry-After header
-            retry_after = response.headers.get("X-Retry-After", "1")  # Default to 1 second if not set
+            retry_after = response.headers.get("X-Retry-After", "2")  # Default to 2 seconds if not set
             try:
                 retry_after = float(retry_after)  # Convert the value to a float
             except ValueError:
-                retry_after = 1  # In case the value cannot be converted, use a default value of 1 second
+                retry_after = 2  # In case the value cannot be converted, use a default value of 2 seconds
             print(f"Rate limit exceeded. Retrying after {retry_after} seconds...")
             time.sleep(retry_after)
         else:
             response.raise_for_status()  # If status is not 429, raise the usual exceptions
             return response.json()
-
 
 def fetch_water_level_data(region_choice=None, site_id=None, lat=None, lon=None, timestamp=None,  distance_m=500,  save_folder=None):
     """
@@ -154,25 +156,21 @@ def fetch_water_level_data(region_choice=None, site_id=None, lat=None, lon=None,
         selected_region = regions[region_choice - 1]
         region_id = selected_region['id']
         region_name = selected_region['fullName']
-        print(region_name)
+       
         # Timestamp
         if timestamp is None:
             timestamp = input("Enter timestamp (YYYY-MM-DD): ")
         user_time = datetime.strptime(timestamp, "%Y-%m-%d")
-       
-
 
         if site_id is not None:
             file_name = f"{region_name.replace(' ', '_')}_{site_id}_{user_time.date()}.json"
             file_path = os.path.join(save_folder, file_name)
-           
-
 
         if os.path.exists(file_path):
             with open(file_path, 'r') as f:
                 water_level = json.load(f)
         else:
-            print('getting water level forecast')
+            print(f'Getting water level forecast for {region_name}, site ID {site_id}, timestamp {user_time.date()}')
             # Forecasts
             forecasts_url = f"{BASE_URL}regions/{region_id}/forecasts?date={user_time.date()}&time=00:00:00"
             forecasts = make_request_with_retry(forecasts_url)
