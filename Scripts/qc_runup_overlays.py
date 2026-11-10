@@ -43,9 +43,10 @@ from pathlib import Path
 
 import matplotlib.pyplot as plt
 
+
 # ---------------------------------------------------------------- CONFIG ----
-RESULTS_DIR = Path(r"D:\usgs\results\runup")      # overlay images
-RUNUP_DIR = Path(r"D:\usgs\results\netcdf")          # TODO: set to your runup netCDF folder
+RESULTS_DIR = Path(r"E:\results\runup")      # overlay images
+RUNUP_DIR = Path(r"E:\results\netcdf")          # TODO: set to your runup netCDF folder
 # In WSL these would be Path("/mnt/d/usgs/results") etc.
 
 OVERLAY_PREFIX, OVERLAY_SUFFIX = "overlay_", ""
