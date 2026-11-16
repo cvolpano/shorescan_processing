@@ -1,0 +1,55 @@
+{
+    "CACO03":
+    {
+        "siteName": "CACO-03",
+        "shortName": "CACO03",
+        "siteInfo": {
+            "siteLocation": "Marconi Beach, MA, USA",
+            "dataOrigin": "USGS Woods Hole Coastal and Marine Science Center",
+            "camMake": "FLIR",
+            "camModel": "Blackfly S",
+            "camLens": "XXXmm",
+            "timezone": "EST",
+            "utmZone": "19N",
+            "verticalDatum": "NADV88",
+            "verticalDatum_description": "North American Vertical Datum of 1988 (NAVD 88)",
+            "references": "Athina M.Z. Lange, Jin-Si R. Over, and Christopher R. Sherwood, 2025, USGS CoastCam CACO-05 at Marconi Beach, Cape Cod National Seashore, Massachusetts (2024 - 2025): Imagery and Calibration Data: U.S. Geological Survey data release, https://doi.org/10.5066/P15IDMWH.",
+            "contributors": "Athina MZ Lange, Jin-Si R Over, Christopher R Sherwood",
+            "metadata_link": "https://doi.org/10.5066/P15IDMWH",
+            "Field_Activity_Number": "2024-002-FA"
+        },
+        "sampling": {
+            "sample_frequency": 2,
+            "collection_unit": "Hz",
+            "sample_period_length": 600,
+            "sample_period_unit": "s"
+        }
+    },
+
+    "CACO04":
+    {
+        "siteName": "CACO-04",
+        "shortName": "CACO04",
+        "siteInfo": {
+            "siteLocation": "Marconi Beach, MA, USA",
+            "dataOrigin": "USGS Woods Hole Coastal and Marine Science Center",
+            "camMake": "FLIR",
+            "camModel": "Blackfly S",
+            "camLens": "XXXmm",
+            "timezone": "EST",
+            "utmZone": "19N",
+            "verticalDatum": "NADV88",
+            "verticalDatum_description": "North American Vertical Datum of 1988 (NAVD 88)",
+            "references": "Athina M.Z. Lange, Jin-Si R. Over, and Christopher R. Sherwood, 2025, USGS CoastCam CACO-05 at Marconi Beach, Cape Cod National Seashore, Massachusetts (2024 - 2025): Imagery and Calibration Data: U.S. Geological Survey data release, https://doi.org/10.5066/P15IDMWH.",
+            "contributors": "Athina MZ Lange, Jin-Si R Over, Christopher R Sherwood",
+            "metadata_link": "https://doi.org/10.5066/P15IDMWH",
+            "Field_Activity_Number": "2024-002-FA"
+        },
+        "sampling": {
+            "sample_frequency": 2,
+            "collection_unit": "Hz",
+            "sample_period_length": 600,
+            "sample_period_unit": "s"
+        }
+    }   
+}

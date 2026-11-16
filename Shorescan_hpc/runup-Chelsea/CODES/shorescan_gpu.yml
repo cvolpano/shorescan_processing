@@ -1,0 +1,95 @@
+name: shorescan_gpu
+channels:
+  - conda-forge
+  - nvidia
+
+dependencies:
+  # -----------------------
+  # CORE
+  # -----------------------
+  - python=3.10
+  - pip
+  - ipython
+  - ipykernel
+
+  # -----------------------
+  # NUMPY / SCIENTIFIC
+  # -----------------------
+  - numpy=1.24.*
+  - scipy
+  - pandas
+  - joblib
+  - tqdm
+
+  # -----------------------
+  # GEOSPATIAL / SCIENCE
+  # -----------------------
+  - xarray
+  - netcdf4
+  - rioxarray
+  - geopy
+
+  # -----------------------
+  # ML / DATA SCIENCE
+  # -----------------------
+  - scikit-learn
+  - scikit-image
+
+  # -----------------------
+  # VISUALIZATION
+  # -----------------------
+  - matplotlib
+  - plotly
+
+  # -----------------------
+  # IMAGE / CV
+  # -----------------------
+  - opencv
+  - piexif
+
+  # -----------------------
+  # UTILITIES
+  # -----------------------
+  - natsort
+
+  # -----------------------
+  # CUDA TOOLKIT (minimal ONLY)
+  # -----------------------
+  - cuda-toolkit=12.4
+
+  # -----------------------
+  # PIP STACK (GPU FRAMEWORKS)
+  # -----------------------
+  - pip:
+      # -------------------
+      # TensorFlow (CUDA 12)
+      # -------------------
+      - tensorflow>=2.16
+
+      # -------------------
+      # PyTorch (CUDA 12 wheels)
+      # -------------------
+      - torch
+      - torchvision
+      - torchaudio
+      - --index-url https://download.pytorch.org/whl/cu121
+
+      # -------------------
+      # ML / CV / DL tools
+      # -------------------
+      - transformers
+      - segment-anything
+      - onnx
+      - onnxruntime
+
+      # -------------------
+      # geospatial / utilities
+      # -------------------
+      - utm
+      - pyexiftool
+      - doodleverse-utils
+
+      # -------------------
+      # compatibility
+      # -------------------
+      - typing-extensions>=4.10

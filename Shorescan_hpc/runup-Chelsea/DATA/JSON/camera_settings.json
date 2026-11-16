@@ -1,0 +1,34 @@
+{
+    "CACO03": {
+        "c1": {
+            "reverse_flag": false,
+            "coordinate_files": {
+                "2024-08-27T15:29:00|2024-11-07T00:00:00": "DATA/CACO03_c1_timestack_20240827.pix",
+                "2024-11-07t00:00:01|2025-01-23T00:00:00": "DATA/CACO03_c1_timestack_20241107.pix",
+                "2025-01-23T00:00:00|2025-03-31T00:00:00": "DATA/CACO04_c1_timestack_20250123.pix"
+            }
+        },
+        "c2": {
+            "reverse_flag": false,
+            "coordinate_files": {
+                "2024-08-27T15:29:00|2024-11-07T00:00:00": "DATA/CACO03_c2_timestack_20240827.pix",
+                "2024-11-07T00:00:01|2025-01-23T00:00:00": "DATA/CACO03_c2_timestack_20241107.pix",
+                "2025-01-23T00:00:00|2025-03-31T00:00:00": "DATA/CACO04_c2_timestack_20250123.pix"
+                        }
+        }
+    },
+    "CACO04": {
+        "c1": {
+            "reverse_flag": false,
+            "coordinate_files": {
+                "2025-01-23T00:00:00|2025-03-31T00:00:00": "DATA/CACO04_c1_timestack_20250123.pix"
+            }
+        },
+        "c2": {
+            "reverse_flag": false,
+            "coordinate_files": {
+                "2025-01-23T00:00:00|2025-03-31T00:00:00": "DATA/CACO04_c2_timestack_20250123.pix"
+            }
+        }
+    }
+}
