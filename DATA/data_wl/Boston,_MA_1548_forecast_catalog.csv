@@ -1,189 +1,189 @@
 date,time,forecast_id,max_impact,file,status
-2024-10-05,00:00:00,84653,Overwash,"Boston,_MA_1548_2024-10-05T0000.json",downloaded
-2024-10-05,06:00:00,84656,Overwash,"Boston,_MA_1548_2024-10-05T0600.json",downloaded
+2024-10-05,00:00:00,84653,Overwash,"Boston,_MA_1548_2024-10-05T0000.json",on disk
+2024-10-05,06:00:00,84656,Overwash,"Boston,_MA_1548_2024-10-05T0600.json",on disk
 2024-10-06,,,,,none issued
 2024-10-07,,,,,none issued
-2024-10-08,00:00:00,84728,Overwash,"Boston,_MA_1548_2024-10-08T0000.json",downloaded
-2024-10-08,06:00:00,84739,Overwash,"Boston,_MA_1548_2024-10-08T0600.json",downloaded
-2024-10-08,12:00:00,84756,Overwash,"Boston,_MA_1548_2024-10-08T1200.json",downloaded
-2024-10-09,00:00:00,84778,Collision,"Boston,_MA_1548_2024-10-09T0000.json",downloaded
-2024-10-09,06:00:00,84791,Collision,"Boston,_MA_1548_2024-10-09T0600.json",downloaded
-2024-10-09,12:00:00,84804,Collision,"Boston,_MA_1548_2024-10-09T1200.json",downloaded
-2024-10-10,00:00:00,84827,Collision,"Boston,_MA_1548_2024-10-10T0000.json",downloaded
-2024-10-10,06:00:00,84838,Collision,"Boston,_MA_1548_2024-10-10T0600.json",downloaded
-2024-10-10,12:00:00,84854,Collision,"Boston,_MA_1548_2024-10-10T1200.json",downloaded
-2024-10-11,00:00:00,84875,Collision,"Boston,_MA_1548_2024-10-11T0000.json",downloaded
-2024-10-11,06:00:00,84883,Collision,"Boston,_MA_1548_2024-10-11T0600.json",downloaded
-2024-10-11,12:00:00,84899,Collision,"Boston,_MA_1548_2024-10-11T1200.json",downloaded
-2024-10-12,00:00:00,84919,Collision,"Boston,_MA_1548_2024-10-12T0000.json",downloaded
-2024-10-12,06:00:00,84927,Collision,"Boston,_MA_1548_2024-10-12T0600.json",downloaded
-2024-10-12,12:00:00,84943,Collision,"Boston,_MA_1548_2024-10-12T1200.json",downloaded
-2024-10-13,00:00:00,84962,Collision,"Boston,_MA_1548_2024-10-13T0000.json",downloaded
-2024-10-13,06:00:00,84969,Collision,"Boston,_MA_1548_2024-10-13T0600.json",downloaded
-2024-10-13,12:00:00,84986,Collision,"Boston,_MA_1548_2024-10-13T1200.json",downloaded
-2024-10-14,00:00:00,85005,Collision,"Boston,_MA_1548_2024-10-14T0000.json",downloaded
-2024-10-14,06:00:00,85014,Collision,"Boston,_MA_1548_2024-10-14T0600.json",downloaded
-2024-10-14,12:00:00,85029,Collision,"Boston,_MA_1548_2024-10-14T1200.json",downloaded
-2024-10-15,00:00:00,85047,Collision,"Boston,_MA_1548_2024-10-15T0000.json",downloaded
-2024-10-15,06:00:00,85055,Collision,"Boston,_MA_1548_2024-10-15T0600.json",downloaded
-2024-10-15,12:00:00,85070,Collision,"Boston,_MA_1548_2024-10-15T1200.json",downloaded
-2024-10-16,00:00:00,85090,Collision,"Boston,_MA_1548_2024-10-16T0000.json",downloaded
-2024-10-16,06:00:00,85099,Collision,"Boston,_MA_1548_2024-10-16T0600.json",downloaded
-2024-10-16,12:00:00,85114,Collision,"Boston,_MA_1548_2024-10-16T1200.json",downloaded
-2024-10-17,00:00:00,85134,Collision,"Boston,_MA_1548_2024-10-17T0000.json",downloaded
-2024-10-17,06:00:00,85142,Collision,"Boston,_MA_1548_2024-10-17T0600.json",downloaded
-2024-10-17,12:00:00,85154,Collision,"Boston,_MA_1548_2024-10-17T1200.json",downloaded
-2024-10-18,00:00:00,85176,Collision,"Boston,_MA_1548_2024-10-18T0000.json",downloaded
-2024-10-18,06:00:00,85185,Collision,"Boston,_MA_1548_2024-10-18T0600.json",downloaded
-2024-10-18,12:00:00,85199,Collision,"Boston,_MA_1548_2024-10-18T1200.json",downloaded
-2024-10-19,00:00:00,85219,Collision,"Boston,_MA_1548_2024-10-19T0000.json",downloaded
-2024-10-19,06:00:00,85230,Collision,"Boston,_MA_1548_2024-10-19T0600.json",downloaded
-2024-10-19,12:00:00,85246,Collision,"Boston,_MA_1548_2024-10-19T1200.json",downloaded
-2024-10-20,00:00:00,85265,Collision,"Boston,_MA_1548_2024-10-20T0000.json",downloaded
-2024-10-20,06:00:00,85274,Collision,"Boston,_MA_1548_2024-10-20T0600.json",downloaded
-2024-10-20,12:00:00,85290,Collision,"Boston,_MA_1548_2024-10-20T1200.json",downloaded
-2024-10-21,00:00:00,85310,Collision,"Boston,_MA_1548_2024-10-21T0000.json",downloaded
-2024-10-21,06:00:00,85319,Collision,"Boston,_MA_1548_2024-10-21T0600.json",downloaded
-2024-10-21,12:00:00,85334,Collision,"Boston,_MA_1548_2024-10-21T1200.json",downloaded
-2024-10-22,00:00:00,85354,Collision,"Boston,_MA_1548_2024-10-22T0000.json",downloaded
-2024-10-22,06:00:00,85362,Collision,"Boston,_MA_1548_2024-10-22T0600.json",downloaded
-2024-10-22,12:00:00,85376,Collision,"Boston,_MA_1548_2024-10-22T1200.json",downloaded
-2024-10-23,00:00:00,85387,Collision,"Boston,_MA_1548_2024-10-23T0000.json",downloaded
-2024-10-23,06:00:00,85408,Collision,"Boston,_MA_1548_2024-10-23T0600.json",downloaded
-2024-10-23,12:00:00,85422,Collision,"Boston,_MA_1548_2024-10-23T1200.json",downloaded
-2024-10-24,00:00:00,85443,Collision,"Boston,_MA_1548_2024-10-24T0000.json",downloaded
-2024-10-24,06:00:00,85452,Collision,"Boston,_MA_1548_2024-10-24T0600.json",downloaded
-2024-10-24,12:00:00,85469,Collision,"Boston,_MA_1548_2024-10-24T1200.json",downloaded
-2024-10-25,00:00:00,85487,Collision,"Boston,_MA_1548_2024-10-25T0000.json",downloaded
-2024-10-25,06:00:00,85496,Overwash,"Boston,_MA_1548_2024-10-25T0600.json",downloaded
-2024-10-25,12:00:00,85511,Overwash,"Boston,_MA_1548_2024-10-25T1200.json",downloaded
-2024-10-26,00:00:00,85530,Collision,"Boston,_MA_1548_2024-10-26T0000.json",downloaded
-2024-10-26,06:00:00,85539,Collision,"Boston,_MA_1548_2024-10-26T0600.json",downloaded
-2024-10-26,12:00:00,85554,Collision,"Boston,_MA_1548_2024-10-26T1200.json",downloaded
-2024-10-27,00:00:00,85573,Collision,"Boston,_MA_1548_2024-10-27T0000.json",downloaded
-2024-10-27,06:00:00,85581,Collision,"Boston,_MA_1548_2024-10-27T0600.json",downloaded
-2024-10-27,12:00:00,85597,Collision,"Boston,_MA_1548_2024-10-27T1200.json",downloaded
-2024-10-28,00:00:00,85618,Collision,"Boston,_MA_1548_2024-10-28T0000.json",downloaded
-2024-10-28,06:00:00,85625,Collision,"Boston,_MA_1548_2024-10-28T0600.json",downloaded
-2024-10-28,12:00:00,85641,Collision,"Boston,_MA_1548_2024-10-28T1200.json",downloaded
-2024-10-29,00:00:00,85658,Collision,"Boston,_MA_1548_2024-10-29T0000.json",downloaded
-2024-10-29,06:00:00,85667,Collision,"Boston,_MA_1548_2024-10-29T0600.json",downloaded
-2024-10-29,12:00:00,85682,Collision,"Boston,_MA_1548_2024-10-29T1200.json",downloaded
-2024-10-30,00:00:00,85703,Collision,"Boston,_MA_1548_2024-10-30T0000.json",downloaded
-2024-10-30,06:00:00,85711,Collision,"Boston,_MA_1548_2024-10-30T0600.json",downloaded
-2024-10-30,12:00:00,85725,Collision,"Boston,_MA_1548_2024-10-30T1200.json",downloaded
-2024-10-31,00:00:00,85746,Collision,"Boston,_MA_1548_2024-10-31T0000.json",downloaded
-2024-10-31,06:00:00,85754,Collision,"Boston,_MA_1548_2024-10-31T0600.json",downloaded
-2024-10-31,12:00:00,85769,Collision,"Boston,_MA_1548_2024-10-31T1200.json",downloaded
-2024-11-01,00:00:00,85785,Collision,"Boston,_MA_1548_2024-11-01T0000.json",downloaded
-2024-11-01,06:00:00,85793,Collision,"Boston,_MA_1548_2024-11-01T0600.json",downloaded
-2024-11-01,12:00:00,85810,Collision,"Boston,_MA_1548_2024-11-01T1200.json",downloaded
-2024-11-02,00:00:00,85826,Collision,"Boston,_MA_1548_2024-11-02T0000.json",downloaded
-2024-11-02,06:00:00,85836,Collision,"Boston,_MA_1548_2024-11-02T0600.json",downloaded
-2024-11-02,12:00:00,85854,Collision,"Boston,_MA_1548_2024-11-02T1200.json",downloaded
-2024-11-03,00:00:00,85873,Collision,"Boston,_MA_1548_2024-11-03T0000.json",downloaded
-2024-11-03,06:00:00,85880,Collision,"Boston,_MA_1548_2024-11-03T0600.json",downloaded
-2024-11-03,12:00:00,85896,Collision,"Boston,_MA_1548_2024-11-03T1200.json",downloaded
-2024-11-04,00:00:00,85916,Collision,"Boston,_MA_1548_2024-11-04T0000.json",downloaded
-2024-11-04,06:00:00,85926,Collision,"Boston,_MA_1548_2024-11-04T0600.json",downloaded
+2024-10-08,00:00:00,84728,Overwash,"Boston,_MA_1548_2024-10-08T0000.json",on disk
+2024-10-08,06:00:00,84739,Overwash,"Boston,_MA_1548_2024-10-08T0600.json",on disk
+2024-10-08,12:00:00,84756,Overwash,"Boston,_MA_1548_2024-10-08T1200.json",on disk
+2024-10-09,00:00:00,84778,Collision,"Boston,_MA_1548_2024-10-09T0000.json",on disk
+2024-10-09,06:00:00,84791,Collision,"Boston,_MA_1548_2024-10-09T0600.json",on disk
+2024-10-09,12:00:00,84804,Collision,"Boston,_MA_1548_2024-10-09T1200.json",on disk
+2024-10-10,00:00:00,84827,Collision,"Boston,_MA_1548_2024-10-10T0000.json",on disk
+2024-10-10,06:00:00,84838,Collision,"Boston,_MA_1548_2024-10-10T0600.json",on disk
+2024-10-10,12:00:00,84854,Collision,"Boston,_MA_1548_2024-10-10T1200.json",on disk
+2024-10-11,00:00:00,84875,Collision,"Boston,_MA_1548_2024-10-11T0000.json",on disk
+2024-10-11,06:00:00,84883,Collision,"Boston,_MA_1548_2024-10-11T0600.json",on disk
+2024-10-11,12:00:00,84899,Collision,"Boston,_MA_1548_2024-10-11T1200.json",on disk
+2024-10-12,00:00:00,84919,Collision,"Boston,_MA_1548_2024-10-12T0000.json",on disk
+2024-10-12,06:00:00,84927,Collision,"Boston,_MA_1548_2024-10-12T0600.json",on disk
+2024-10-12,12:00:00,84943,Collision,"Boston,_MA_1548_2024-10-12T1200.json",on disk
+2024-10-13,00:00:00,84962,Collision,"Boston,_MA_1548_2024-10-13T0000.json",on disk
+2024-10-13,06:00:00,84969,Collision,"Boston,_MA_1548_2024-10-13T0600.json",on disk
+2024-10-13,12:00:00,84986,Collision,"Boston,_MA_1548_2024-10-13T1200.json",on disk
+2024-10-14,00:00:00,85005,Collision,"Boston,_MA_1548_2024-10-14T0000.json",on disk
+2024-10-14,06:00:00,85014,Collision,"Boston,_MA_1548_2024-10-14T0600.json",on disk
+2024-10-14,12:00:00,85029,Collision,"Boston,_MA_1548_2024-10-14T1200.json",on disk
+2024-10-15,00:00:00,85047,Collision,"Boston,_MA_1548_2024-10-15T0000.json",on disk
+2024-10-15,06:00:00,85055,Collision,"Boston,_MA_1548_2024-10-15T0600.json",on disk
+2024-10-15,12:00:00,85070,Collision,"Boston,_MA_1548_2024-10-15T1200.json",on disk
+2024-10-16,00:00:00,85090,Collision,"Boston,_MA_1548_2024-10-16T0000.json",on disk
+2024-10-16,06:00:00,85099,Collision,"Boston,_MA_1548_2024-10-16T0600.json",on disk
+2024-10-16,12:00:00,85114,Collision,"Boston,_MA_1548_2024-10-16T1200.json",on disk
+2024-10-17,00:00:00,85134,Collision,"Boston,_MA_1548_2024-10-17T0000.json",on disk
+2024-10-17,06:00:00,85142,Collision,"Boston,_MA_1548_2024-10-17T0600.json",on disk
+2024-10-17,12:00:00,85154,Collision,"Boston,_MA_1548_2024-10-17T1200.json",on disk
+2024-10-18,00:00:00,85176,Collision,"Boston,_MA_1548_2024-10-18T0000.json",on disk
+2024-10-18,06:00:00,85185,Collision,"Boston,_MA_1548_2024-10-18T0600.json",on disk
+2024-10-18,12:00:00,85199,Collision,"Boston,_MA_1548_2024-10-18T1200.json",on disk
+2024-10-19,00:00:00,85219,Collision,"Boston,_MA_1548_2024-10-19T0000.json",on disk
+2024-10-19,06:00:00,85230,Collision,"Boston,_MA_1548_2024-10-19T0600.json",on disk
+2024-10-19,12:00:00,85246,Collision,"Boston,_MA_1548_2024-10-19T1200.json",on disk
+2024-10-20,00:00:00,85265,Collision,"Boston,_MA_1548_2024-10-20T0000.json",on disk
+2024-10-20,06:00:00,85274,Collision,"Boston,_MA_1548_2024-10-20T0600.json",on disk
+2024-10-20,12:00:00,85290,Collision,"Boston,_MA_1548_2024-10-20T1200.json",on disk
+2024-10-21,00:00:00,85310,Collision,"Boston,_MA_1548_2024-10-21T0000.json",on disk
+2024-10-21,06:00:00,85319,Collision,"Boston,_MA_1548_2024-10-21T0600.json",on disk
+2024-10-21,12:00:00,85334,Collision,"Boston,_MA_1548_2024-10-21T1200.json",on disk
+2024-10-22,00:00:00,85354,Collision,"Boston,_MA_1548_2024-10-22T0000.json",on disk
+2024-10-22,06:00:00,85362,Collision,"Boston,_MA_1548_2024-10-22T0600.json",on disk
+2024-10-22,12:00:00,85376,Collision,"Boston,_MA_1548_2024-10-22T1200.json",on disk
+2024-10-23,00:00:00,85387,Collision,"Boston,_MA_1548_2024-10-23T0000.json",on disk
+2024-10-23,06:00:00,85408,Collision,"Boston,_MA_1548_2024-10-23T0600.json",on disk
+2024-10-23,12:00:00,85422,Collision,"Boston,_MA_1548_2024-10-23T1200.json",on disk
+2024-10-24,00:00:00,85443,Collision,"Boston,_MA_1548_2024-10-24T0000.json",on disk
+2024-10-24,06:00:00,85452,Collision,"Boston,_MA_1548_2024-10-24T0600.json",on disk
+2024-10-24,12:00:00,85469,Collision,"Boston,_MA_1548_2024-10-24T1200.json",on disk
+2024-10-25,00:00:00,85487,Collision,"Boston,_MA_1548_2024-10-25T0000.json",on disk
+2024-10-25,06:00:00,85496,Overwash,"Boston,_MA_1548_2024-10-25T0600.json",on disk
+2024-10-25,12:00:00,85511,Overwash,"Boston,_MA_1548_2024-10-25T1200.json",on disk
+2024-10-26,00:00:00,85530,Collision,"Boston,_MA_1548_2024-10-26T0000.json",on disk
+2024-10-26,06:00:00,85539,Collision,"Boston,_MA_1548_2024-10-26T0600.json",on disk
+2024-10-26,12:00:00,85554,Collision,"Boston,_MA_1548_2024-10-26T1200.json",on disk
+2024-10-27,00:00:00,85573,Collision,"Boston,_MA_1548_2024-10-27T0000.json",on disk
+2024-10-27,06:00:00,85581,Collision,"Boston,_MA_1548_2024-10-27T0600.json",on disk
+2024-10-27,12:00:00,85597,Collision,"Boston,_MA_1548_2024-10-27T1200.json",on disk
+2024-10-28,00:00:00,85618,Collision,"Boston,_MA_1548_2024-10-28T0000.json",on disk
+2024-10-28,06:00:00,85625,Collision,"Boston,_MA_1548_2024-10-28T0600.json",on disk
+2024-10-28,12:00:00,85641,Collision,"Boston,_MA_1548_2024-10-28T1200.json",on disk
+2024-10-29,00:00:00,85658,Collision,"Boston,_MA_1548_2024-10-29T0000.json",on disk
+2024-10-29,06:00:00,85667,Collision,"Boston,_MA_1548_2024-10-29T0600.json",on disk
+2024-10-29,12:00:00,85682,Collision,"Boston,_MA_1548_2024-10-29T1200.json",on disk
+2024-10-30,00:00:00,85703,Collision,"Boston,_MA_1548_2024-10-30T0000.json",on disk
+2024-10-30,06:00:00,85711,Collision,"Boston,_MA_1548_2024-10-30T0600.json",on disk
+2024-10-30,12:00:00,85725,Collision,"Boston,_MA_1548_2024-10-30T1200.json",on disk
+2024-10-31,00:00:00,85746,Collision,"Boston,_MA_1548_2024-10-31T0000.json",on disk
+2024-10-31,06:00:00,85754,Collision,"Boston,_MA_1548_2024-10-31T0600.json",on disk
+2024-10-31,12:00:00,85769,Collision,"Boston,_MA_1548_2024-10-31T1200.json",on disk
+2024-11-01,00:00:00,85785,Collision,"Boston,_MA_1548_2024-11-01T0000.json",on disk
+2024-11-01,06:00:00,85793,Collision,"Boston,_MA_1548_2024-11-01T0600.json",on disk
+2024-11-01,12:00:00,85810,Collision,"Boston,_MA_1548_2024-11-01T1200.json",on disk
+2024-11-02,00:00:00,85826,Collision,"Boston,_MA_1548_2024-11-02T0000.json",on disk
+2024-11-02,06:00:00,85836,Collision,"Boston,_MA_1548_2024-11-02T0600.json",on disk
+2024-11-02,12:00:00,85854,Collision,"Boston,_MA_1548_2024-11-02T1200.json",on disk
+2024-11-03,00:00:00,85873,Collision,"Boston,_MA_1548_2024-11-03T0000.json",on disk
+2024-11-03,06:00:00,85880,Collision,"Boston,_MA_1548_2024-11-03T0600.json",on disk
+2024-11-03,12:00:00,85896,Collision,"Boston,_MA_1548_2024-11-03T1200.json",on disk
+2024-11-04,00:00:00,85916,Collision,"Boston,_MA_1548_2024-11-04T0000.json",on disk
+2024-11-04,06:00:00,85926,Collision,"Boston,_MA_1548_2024-11-04T0600.json",on disk
 2024-11-05,,,,,none issued
 2024-11-06,,,,,none issued
-2024-11-07,00:00:00,85935,Collision,"Boston,_MA_1548_2024-11-07T0000.json",downloaded
-2024-11-07,06:00:00,85936,Collision,"Boston,_MA_1548_2024-11-07T0600.json",downloaded
-2024-11-07,12:00:00,85937,Collision,"Boston,_MA_1548_2024-11-07T1200.json",downloaded
-2024-11-08,00:00:00,85938,Collision,"Boston,_MA_1548_2024-11-08T0000.json",downloaded
-2024-11-08,06:00:00,85939,Collision,"Boston,_MA_1548_2024-11-08T0600.json",downloaded
-2024-11-08,12:00:00,85940,Collision,"Boston,_MA_1548_2024-11-08T1200.json",downloaded
-2024-11-09,00:00:00,86023,Collision,"Boston,_MA_1548_2024-11-09T0000.json",downloaded
-2024-11-09,06:00:00,86035,Collision,"Boston,_MA_1548_2024-11-09T0600.json",downloaded
-2024-11-09,12:00:00,86049,Collision,"Boston,_MA_1548_2024-11-09T1200.json",downloaded
-2024-11-10,00:00:00,86068,Collision,"Boston,_MA_1548_2024-11-10T0000.json",downloaded
-2024-11-10,06:00:00,86079,Collision,"Boston,_MA_1548_2024-11-10T0600.json",downloaded
-2024-11-10,12:00:00,86096,Collision,"Boston,_MA_1548_2024-11-10T1200.json",downloaded
-2024-11-11,00:00:00,86112,Collision,"Boston,_MA_1548_2024-11-11T0000.json",downloaded
-2024-11-11,06:00:00,86123,Collision,"Boston,_MA_1548_2024-11-11T0600.json",downloaded
-2024-11-11,12:00:00,86139,Collision,"Boston,_MA_1548_2024-11-11T1200.json",downloaded
-2024-11-12,00:00:00,86152,Overwash,"Boston,_MA_1548_2024-11-12T0000.json",downloaded
-2024-11-12,06:00:00,86164,Overwash,"Boston,_MA_1548_2024-11-12T0600.json",downloaded
-2024-11-12,12:00:00,86178,Overwash,"Boston,_MA_1548_2024-11-12T1200.json",downloaded
-2024-11-13,00:00:00,86194,Overwash,"Boston,_MA_1548_2024-11-13T0000.json",downloaded
-2024-11-13,06:00:00,86204,Overwash,"Boston,_MA_1548_2024-11-13T0600.json",downloaded
-2024-11-13,12:00:00,86216,Overwash,"Boston,_MA_1548_2024-11-13T1200.json",downloaded
-2024-11-14,00:00:00,86234,Overwash,"Boston,_MA_1548_2024-11-14T0000.json",downloaded
-2024-11-14,06:00:00,86244,Overwash,"Boston,_MA_1548_2024-11-14T0600.json",downloaded
-2024-11-14,12:00:00,86256,Overwash,"Boston,_MA_1548_2024-11-14T1200.json",downloaded
-2024-11-15,00:00:00,86274,Overwash,"Boston,_MA_1548_2024-11-15T0000.json",downloaded
-2024-11-15,06:00:00,86286,Overwash,"Boston,_MA_1548_2024-11-15T0600.json",downloaded
-2024-11-15,12:00:00,86297,Overwash,"Boston,_MA_1548_2024-11-15T1200.json",downloaded
-2024-11-16,00:00:00,86316,Overwash,"Boston,_MA_1548_2024-11-16T0000.json",downloaded
-2024-11-16,06:00:00,86326,Overwash,"Boston,_MA_1548_2024-11-16T0600.json",downloaded
-2024-11-16,12:00:00,86340,Overwash,"Boston,_MA_1548_2024-11-16T1200.json",downloaded
-2024-11-17,00:00:00,86356,Collision,"Boston,_MA_1548_2024-11-17T0000.json",downloaded
-2024-11-17,06:00:00,86366,Collision,"Boston,_MA_1548_2024-11-17T0600.json",downloaded
-2024-11-17,12:00:00,86380,Collision,"Boston,_MA_1548_2024-11-17T1200.json",downloaded
-2024-11-18,00:00:00,86395,Collision,"Boston,_MA_1548_2024-11-18T0000.json",downloaded
-2024-11-18,06:00:00,86407,Collision,"Boston,_MA_1548_2024-11-18T0600.json",downloaded
-2024-11-18,12:00:00,86421,Collision,"Boston,_MA_1548_2024-11-18T1200.json",downloaded
-2024-11-19,00:00:00,86436,Collision,"Boston,_MA_1548_2024-11-19T0000.json",downloaded
-2024-11-19,06:00:00,86447,Collision,"Boston,_MA_1548_2024-11-19T0600.json",downloaded
-2024-11-19,12:00:00,86463,Collision,"Boston,_MA_1548_2024-11-19T1200.json",downloaded
-2024-11-20,00:00:00,86480,Collision,"Boston,_MA_1548_2024-11-20T0000.json",downloaded
-2024-11-20,06:00:00,86490,Collision,"Boston,_MA_1548_2024-11-20T0600.json",downloaded
-2024-11-20,12:00:00,86506,Collision,"Boston,_MA_1548_2024-11-20T1200.json",downloaded
-2024-11-21,00:00:00,86521,Collision,"Boston,_MA_1548_2024-11-21T0000.json",downloaded
-2024-11-21,06:00:00,86530,Collision,"Boston,_MA_1548_2024-11-21T0600.json",downloaded
-2024-11-21,12:00:00,86546,Collision,"Boston,_MA_1548_2024-11-21T1200.json",downloaded
-2024-11-22,00:00:00,86561,Collision,"Boston,_MA_1548_2024-11-22T0000.json",downloaded
-2024-11-22,06:00:00,86572,Collision,"Boston,_MA_1548_2024-11-22T0600.json",downloaded
-2024-11-22,12:00:00,86587,Collision,"Boston,_MA_1548_2024-11-22T1200.json",downloaded
-2024-11-23,00:00:00,86604,Collision,"Boston,_MA_1548_2024-11-23T0000.json",downloaded
-2024-11-23,06:00:00,86616,Collision,"Boston,_MA_1548_2024-11-23T0600.json",downloaded
-2024-11-23,12:00:00,86633,Collision,"Boston,_MA_1548_2024-11-23T1200.json",downloaded
-2024-11-24,00:00:00,86645,Collision,"Boston,_MA_1548_2024-11-24T0000.json",downloaded
-2024-11-24,06:00:00,86658,Collision,"Boston,_MA_1548_2024-11-24T0600.json",downloaded
-2024-11-24,12:00:00,86676,Collision,"Boston,_MA_1548_2024-11-24T1200.json",downloaded
-2024-11-25,00:00:00,86687,Collision,"Boston,_MA_1548_2024-11-25T0000.json",downloaded
-2024-11-25,06:00:00,86699,Collision,"Boston,_MA_1548_2024-11-25T0600.json",downloaded
-2024-11-25,12:00:00,86715,Collision,"Boston,_MA_1548_2024-11-25T1200.json",downloaded
-2024-11-26,00:00:00,86734,Collision,"Boston,_MA_1548_2024-11-26T0000.json",downloaded
-2024-11-26,06:00:00,86740,Collision,"Boston,_MA_1548_2024-11-26T0600.json",downloaded
-2024-11-26,12:00:00,86755,Collision,"Boston,_MA_1548_2024-11-26T1200.json",downloaded
-2024-11-27,00:00:00,86768,Collision,"Boston,_MA_1548_2024-11-27T0000.json",downloaded
-2024-11-27,06:00:00,86780,Collision,"Boston,_MA_1548_2024-11-27T0600.json",downloaded
-2024-11-27,12:00:00,86793,Collision,"Boston,_MA_1548_2024-11-27T1200.json",downloaded
-2024-11-28,00:00:00,86811,Collision,"Boston,_MA_1548_2024-11-28T0000.json",downloaded
-2024-11-28,06:00:00,86821,Collision,"Boston,_MA_1548_2024-11-28T0600.json",downloaded
-2024-11-28,12:00:00,86835,Collision,"Boston,_MA_1548_2024-11-28T1200.json",downloaded
-2024-11-29,00:00:00,86850,Collision,"Boston,_MA_1548_2024-11-29T0000.json",downloaded
-2024-11-29,06:00:00,86861,Collision,"Boston,_MA_1548_2024-11-29T0600.json",downloaded
-2024-11-29,12:00:00,86874,Collision,"Boston,_MA_1548_2024-11-29T1200.json",downloaded
-2024-11-30,00:00:00,86888,Collision,"Boston,_MA_1548_2024-11-30T0000.json",downloaded
-2024-11-30,06:00:00,86901,Collision,"Boston,_MA_1548_2024-11-30T0600.json",downloaded
-2024-11-30,12:00:00,86916,Collision,"Boston,_MA_1548_2024-11-30T1200.json",downloaded
-2024-12-01,00:00:00,86927,Collision,"Boston,_MA_1548_2024-12-01T0000.json",downloaded
-2024-12-01,06:00:00,86940,Collision,"Boston,_MA_1548_2024-12-01T0600.json",downloaded
-2024-12-01,12:00:00,86956,Collision,"Boston,_MA_1548_2024-12-01T1200.json",downloaded
-2024-12-02,00:00:00,86968,Collision,"Boston,_MA_1548_2024-12-02T0000.json",downloaded
-2024-12-02,06:00:00,86980,Overwash,"Boston,_MA_1548_2024-12-02T0600.json",downloaded
-2024-12-02,12:00:00,86988,Overwash,"Boston,_MA_1548_2024-12-02T1200.json",downloaded
-2024-12-03,00:00:00,87011,Collision,"Boston,_MA_1548_2024-12-03T0000.json",downloaded
-2024-12-03,06:00:00,87020,Collision,"Boston,_MA_1548_2024-12-03T0600.json",downloaded
-2024-12-03,12:00:00,87034,Collision,"Boston,_MA_1548_2024-12-03T1200.json",downloaded
-2024-12-04,00:00:00,87052,Collision,"Boston,_MA_1548_2024-12-04T0000.json",downloaded
-2024-12-04,06:00:00,87063,Collision,"Boston,_MA_1548_2024-12-04T0600.json",downloaded
-2024-12-04,12:00:00,87076,Collision,"Boston,_MA_1548_2024-12-04T1200.json",downloaded
-2024-12-05,00:00:00,87094,Collision,"Boston,_MA_1548_2024-12-05T0000.json",downloaded
-2024-12-05,06:00:00,87106,Collision,"Boston,_MA_1548_2024-12-05T0600.json",downloaded
-2024-12-05,12:00:00,87118,Collision,"Boston,_MA_1548_2024-12-05T1200.json",downloaded
-2024-12-06,00:00:00,87139,Collision,"Boston,_MA_1548_2024-12-06T0000.json",downloaded
-2024-12-06,06:00:00,87150,Collision,"Boston,_MA_1548_2024-12-06T0600.json",downloaded
-2024-12-06,12:00:00,87159,Collision,"Boston,_MA_1548_2024-12-06T1200.json",downloaded
-2024-12-07,00:00:00,87180,Overwash,"Boston,_MA_1548_2024-12-07T0000.json",downloaded
-2024-12-07,06:00:00,87191,Overwash,"Boston,_MA_1548_2024-12-07T0600.json",downloaded
-2024-12-07,12:00:00,87205,Overwash,"Boston,_MA_1548_2024-12-07T1200.json",downloaded
-2024-12-08,00:00:00,87222,Overwash,"Boston,_MA_1548_2024-12-08T0000.json",downloaded
-2024-12-08,06:00:00,87232,Overwash,"Boston,_MA_1548_2024-12-08T0600.json",downloaded
-2024-12-08,12:00:00,87245,Overwash,"Boston,_MA_1548_2024-12-08T1200.json",downloaded
+2024-11-07,00:00:00,85935,Collision,"Boston,_MA_1548_2024-11-07T0000.json",on disk
+2024-11-07,06:00:00,85936,Collision,"Boston,_MA_1548_2024-11-07T0600.json",on disk
+2024-11-07,12:00:00,85937,Collision,"Boston,_MA_1548_2024-11-07T1200.json",on disk
+2024-11-08,00:00:00,85938,Collision,"Boston,_MA_1548_2024-11-08T0000.json",on disk
+2024-11-08,06:00:00,85939,Collision,"Boston,_MA_1548_2024-11-08T0600.json",on disk
+2024-11-08,12:00:00,85940,Collision,"Boston,_MA_1548_2024-11-08T1200.json",on disk
+2024-11-09,00:00:00,86023,Collision,"Boston,_MA_1548_2024-11-09T0000.json",on disk
+2024-11-09,06:00:00,86035,Collision,"Boston,_MA_1548_2024-11-09T0600.json",on disk
+2024-11-09,12:00:00,86049,Collision,"Boston,_MA_1548_2024-11-09T1200.json",on disk
+2024-11-10,00:00:00,86068,Collision,"Boston,_MA_1548_2024-11-10T0000.json",on disk
+2024-11-10,06:00:00,86079,Collision,"Boston,_MA_1548_2024-11-10T0600.json",on disk
+2024-11-10,12:00:00,86096,Collision,"Boston,_MA_1548_2024-11-10T1200.json",on disk
+2024-11-11,00:00:00,86112,Collision,"Boston,_MA_1548_2024-11-11T0000.json",on disk
+2024-11-11,06:00:00,86123,Collision,"Boston,_MA_1548_2024-11-11T0600.json",on disk
+2024-11-11,12:00:00,86139,Collision,"Boston,_MA_1548_2024-11-11T1200.json",on disk
+2024-11-12,00:00:00,86152,Overwash,"Boston,_MA_1548_2024-11-12T0000.json",on disk
+2024-11-12,06:00:00,86164,Overwash,"Boston,_MA_1548_2024-11-12T0600.json",on disk
+2024-11-12,12:00:00,86178,Overwash,"Boston,_MA_1548_2024-11-12T1200.json",on disk
+2024-11-13,00:00:00,86194,Overwash,"Boston,_MA_1548_2024-11-13T0000.json",on disk
+2024-11-13,06:00:00,86204,Overwash,"Boston,_MA_1548_2024-11-13T0600.json",on disk
+2024-11-13,12:00:00,86216,Overwash,"Boston,_MA_1548_2024-11-13T1200.json",on disk
+2024-11-14,00:00:00,86234,Overwash,"Boston,_MA_1548_2024-11-14T0000.json",on disk
+2024-11-14,06:00:00,86244,Overwash,"Boston,_MA_1548_2024-11-14T0600.json",on disk
+2024-11-14,12:00:00,86256,Overwash,"Boston,_MA_1548_2024-11-14T1200.json",on disk
+2024-11-15,00:00:00,86274,Overwash,"Boston,_MA_1548_2024-11-15T0000.json",on disk
+2024-11-15,06:00:00,86286,Overwash,"Boston,_MA_1548_2024-11-15T0600.json",on disk
+2024-11-15,12:00:00,86297,Overwash,"Boston,_MA_1548_2024-11-15T1200.json",on disk
+2024-11-16,00:00:00,86316,Overwash,"Boston,_MA_1548_2024-11-16T0000.json",on disk
+2024-11-16,06:00:00,86326,Overwash,"Boston,_MA_1548_2024-11-16T0600.json",on disk
+2024-11-16,12:00:00,86340,Overwash,"Boston,_MA_1548_2024-11-16T1200.json",on disk
+2024-11-17,00:00:00,86356,Collision,"Boston,_MA_1548_2024-11-17T0000.json",on disk
+2024-11-17,06:00:00,86366,Collision,"Boston,_MA_1548_2024-11-17T0600.json",on disk
+2024-11-17,12:00:00,86380,Collision,"Boston,_MA_1548_2024-11-17T1200.json",on disk
+2024-11-18,00:00:00,86395,Collision,"Boston,_MA_1548_2024-11-18T0000.json",on disk
+2024-11-18,06:00:00,86407,Collision,"Boston,_MA_1548_2024-11-18T0600.json",on disk
+2024-11-18,12:00:00,86421,Collision,"Boston,_MA_1548_2024-11-18T1200.json",on disk
+2024-11-19,00:00:00,86436,Collision,"Boston,_MA_1548_2024-11-19T0000.json",on disk
+2024-11-19,06:00:00,86447,Collision,"Boston,_MA_1548_2024-11-19T0600.json",on disk
+2024-11-19,12:00:00,86463,Collision,"Boston,_MA_1548_2024-11-19T1200.json",on disk
+2024-11-20,00:00:00,86480,Collision,"Boston,_MA_1548_2024-11-20T0000.json",on disk
+2024-11-20,06:00:00,86490,Collision,"Boston,_MA_1548_2024-11-20T0600.json",on disk
+2024-11-20,12:00:00,86506,Collision,"Boston,_MA_1548_2024-11-20T1200.json",on disk
+2024-11-21,00:00:00,86521,Collision,"Boston,_MA_1548_2024-11-21T0000.json",on disk
+2024-11-21,06:00:00,86530,Collision,"Boston,_MA_1548_2024-11-21T0600.json",on disk
+2024-11-21,12:00:00,86546,Collision,"Boston,_MA_1548_2024-11-21T1200.json",on disk
+2024-11-22,00:00:00,86561,Collision,"Boston,_MA_1548_2024-11-22T0000.json",on disk
+2024-11-22,06:00:00,86572,Collision,"Boston,_MA_1548_2024-11-22T0600.json",on disk
+2024-11-22,12:00:00,86587,Collision,"Boston,_MA_1548_2024-11-22T1200.json",on disk
+2024-11-23,00:00:00,86604,Collision,"Boston,_MA_1548_2024-11-23T0000.json",on disk
+2024-11-23,06:00:00,86616,Collision,"Boston,_MA_1548_2024-11-23T0600.json",on disk
+2024-11-23,12:00:00,86633,Collision,"Boston,_MA_1548_2024-11-23T1200.json",on disk
+2024-11-24,00:00:00,86645,Collision,"Boston,_MA_1548_2024-11-24T0000.json",on disk
+2024-11-24,06:00:00,86658,Collision,"Boston,_MA_1548_2024-11-24T0600.json",on disk
+2024-11-24,12:00:00,86676,Collision,"Boston,_MA_1548_2024-11-24T1200.json",on disk
+2024-11-25,00:00:00,86687,Collision,"Boston,_MA_1548_2024-11-25T0000.json",on disk
+2024-11-25,06:00:00,86699,Collision,"Boston,_MA_1548_2024-11-25T0600.json",on disk
+2024-11-25,12:00:00,86715,Collision,"Boston,_MA_1548_2024-11-25T1200.json",on disk
+2024-11-26,00:00:00,86734,Collision,"Boston,_MA_1548_2024-11-26T0000.json",on disk
+2024-11-26,06:00:00,86740,Collision,"Boston,_MA_1548_2024-11-26T0600.json",on disk
+2024-11-26,12:00:00,86755,Collision,"Boston,_MA_1548_2024-11-26T1200.json",on disk
+2024-11-27,00:00:00,86768,Collision,"Boston,_MA_1548_2024-11-27T0000.json",on disk
+2024-11-27,06:00:00,86780,Collision,"Boston,_MA_1548_2024-11-27T0600.json",on disk
+2024-11-27,12:00:00,86793,Collision,"Boston,_MA_1548_2024-11-27T1200.json",on disk
+2024-11-28,00:00:00,86811,Collision,"Boston,_MA_1548_2024-11-28T0000.json",on disk
+2024-11-28,06:00:00,86821,Collision,"Boston,_MA_1548_2024-11-28T0600.json",on disk
+2024-11-28,12:00:00,86835,Collision,"Boston,_MA_1548_2024-11-28T1200.json",on disk
+2024-11-29,00:00:00,86850,Collision,"Boston,_MA_1548_2024-11-29T0000.json",on disk
+2024-11-29,06:00:00,86861,Collision,"Boston,_MA_1548_2024-11-29T0600.json",on disk
+2024-11-29,12:00:00,86874,Collision,"Boston,_MA_1548_2024-11-29T1200.json",on disk
+2024-11-30,00:00:00,86888,Collision,"Boston,_MA_1548_2024-11-30T0000.json",on disk
+2024-11-30,06:00:00,86901,Collision,"Boston,_MA_1548_2024-11-30T0600.json",on disk
+2024-11-30,12:00:00,86916,Collision,"Boston,_MA_1548_2024-11-30T1200.json",on disk
+2024-12-01,00:00:00,86927,Collision,"Boston,_MA_1548_2024-12-01T0000.json",on disk
+2024-12-01,06:00:00,86940,Collision,"Boston,_MA_1548_2024-12-01T0600.json",on disk
+2024-12-01,12:00:00,86956,Collision,"Boston,_MA_1548_2024-12-01T1200.json",on disk
+2024-12-02,00:00:00,86968,Collision,"Boston,_MA_1548_2024-12-02T0000.json",on disk
+2024-12-02,06:00:00,86980,Overwash,"Boston,_MA_1548_2024-12-02T0600.json",on disk
+2024-12-02,12:00:00,86988,Overwash,"Boston,_MA_1548_2024-12-02T1200.json",on disk
+2024-12-03,00:00:00,87011,Collision,"Boston,_MA_1548_2024-12-03T0000.json",on disk
+2024-12-03,06:00:00,87020,Collision,"Boston,_MA_1548_2024-12-03T0600.json",on disk
+2024-12-03,12:00:00,87034,Collision,"Boston,_MA_1548_2024-12-03T1200.json",on disk
+2024-12-04,00:00:00,87052,Collision,"Boston,_MA_1548_2024-12-04T0000.json",on disk
+2024-12-04,06:00:00,87063,Collision,"Boston,_MA_1548_2024-12-04T0600.json",on disk
+2024-12-04,12:00:00,87076,Collision,"Boston,_MA_1548_2024-12-04T1200.json",on disk
+2024-12-05,00:00:00,87094,Collision,"Boston,_MA_1548_2024-12-05T0000.json",on disk
+2024-12-05,06:00:00,87106,Collision,"Boston,_MA_1548_2024-12-05T0600.json",on disk
+2024-12-05,12:00:00,87118,Collision,"Boston,_MA_1548_2024-12-05T1200.json",on disk
+2024-12-06,00:00:00,87139,Collision,"Boston,_MA_1548_2024-12-06T0000.json",on disk
+2024-12-06,06:00:00,87150,Collision,"Boston,_MA_1548_2024-12-06T0600.json",on disk
+2024-12-06,12:00:00,87159,Collision,"Boston,_MA_1548_2024-12-06T1200.json",on disk
+2024-12-07,00:00:00,87180,Overwash,"Boston,_MA_1548_2024-12-07T0000.json",on disk
+2024-12-07,06:00:00,87191,Overwash,"Boston,_MA_1548_2024-12-07T0600.json",on disk
+2024-12-07,12:00:00,87205,Overwash,"Boston,_MA_1548_2024-12-07T1200.json",on disk
+2024-12-08,00:00:00,87222,Overwash,"Boston,_MA_1548_2024-12-08T0000.json",on disk
+2024-12-08,06:00:00,87232,Overwash,"Boston,_MA_1548_2024-12-08T0600.json",on disk
+2024-12-08,12:00:00,87245,Overwash,"Boston,_MA_1548_2024-12-08T1200.json",on disk
 2024-12-09,00:00:00,87264,Overwash,"Boston,_MA_1548_2024-12-09.json",on disk
 2024-12-09,06:00:00,87275,Overwash,"Boston,_MA_1548_2024-12-09T0600.json",on disk
 2024-12-09,12:00:00,87289,Overwash,"Boston,_MA_1548_2024-12-09T1200.json",on disk

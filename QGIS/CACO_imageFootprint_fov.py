@@ -1,6 +1,18 @@
 """
 Oblique camera field-of-view footprint generator for QGIS.
 
+Author:  Chelsea A. Volpano (cvolpano@gmail.com)
+Revised: 2026-11-14 with Claude Opus 5.5 (claude-opus-5-5)
+
+REVISION SUMMARY
+----------------
+2026-11-14  Added load_nearest_calibration(): pairs each transect date
+            (site + camera + date) with the IO and EO files closest in
+            date instead of requiring exact filename matches. Footprint
+            layers now carry io_file / eo_file / gap-day attributes.
+            Removed a stray __main__ block that called an undefined
+            function. Fixed CRS comment (EPSG:26919 = UTM 19N).
+
 Computes ground footprint polygons for oblique images given exterior
 orientation (position + azimuth/tilt/roll) and interior orientation
 (focal length, principal point, Brown-Conrady distortion), read from a
@@ -70,6 +82,9 @@ IMPORTANT CAVEATS
 
 import math
 import os
+import re
+from datetime import datetime
+from pathlib import Path
 
 from qgis.core import (
     QgsProject, QgsVectorLayer, QgsFeature, QgsGeometry,
@@ -92,10 +107,20 @@ except ImportError:
 # ----------------------------------------------------------------------
 
 # YAML_PATH = "C:/Users/cvolpano/coastcam_processing/CACO_orthoRect/CACO_obliqueImage_Footprints/IOEO_c2_01232025.yaml"
-EXT_PATH = "C:/Users/cvolpano/shorescan_processing/QGIS/extrinsics"
-INT_PATH = "C:/Users/cvolpano/shorescan_processing/QGIS/intrinsics"
+# EXT_PATH = "C:/Users/cvolpano/shorescan_processing/QGIS/extrinsics"
+# INT_PATH = "C:/Users/cvolpano/shorescan_processing/QGIS/intrinsics"
 
-CRS = "EPSG:26919"  # UTM zone 18N, NAD83 (use EPSG:32618 if coords are WGS84 UTM18N)
+# NAD83 / UTM zone 19N. Marconi (~70.0 W) falls in zone 19; the camera
+# x/y (420088 E, 4638319 N) only land on Cape Cod in zone 19, despite the
+# "UTM zone 18" comment inside the EO YAMLs.
+CRS = "EPSG:26919"
+
+# --- nearest-date calibration matching (see load_nearest_calibration) ---
+TRANSECT_DIR = "C:/Users/cvolp/shorescan_processing/QGIS/CACO03_timestack_20240920_transects"
+IO_DIR = None          # None = look for *_IO.yaml inside TRANSECT_DIR
+EO_DIR = None          # None = look for *_EO.yaml inside TRANSECT_DIR
+CALIB_MODE = "prior"   # "prior" (latest on/before) or "nearest" (either side)
+MAX_GAP_DAYS = 60      # warn when the chosen calibration is older/newer than this
 
 GROUND_MODE = "flat"   # "flat" or "dem"
 
@@ -108,13 +133,9 @@ DEM_PATH = None         # e.g. "/path/to/dem.tif" if not already loaded
 DEM_STEP = .250          # meters, initial ray-march step size along the ray
 DEM_MAX_MARCH = 2000.0  # meters, safety cap on total ray-march distance
 
-MAX_RANGE = 500.0       # meters - cap for sky-pointing / far-away rays
+MAX_RANGE = 200.0       # meters - cap for sky-pointing / far-away rays
 POINTS_PER_EDGE = 40    # density of sampling around image border
 
-
-# ----------------------------------------------------------------------
-# YAML LOADING
-# ----------------------------------------------------------------------
 
 def load_yaml_config(path):
     """Loads the combined YAML schema described in the module docstring."""
@@ -254,6 +275,171 @@ def _print_match_diagnostic(missing_fname, ext_files, int_files, extrinsic_dir, 
               f"or the camera-ID portion of the filename doesn't match "
               f"between folders.")
     print(f"{'='*70}\n")
+
+
+# ----------------------------------------------------------------------
+# NEAREST-DATE CALIBRATION MATCHING
+# ----------------------------------------------------------------------
+
+# SITE (4 letters + 2 digits) _ camera (c1, c2, ...) _ [anything_] 8-digit date
+# Matches e.g. CACO03_c1_20240801_IO, CACO03_c1_timestack_20240920_transect150,
+# and CACO03_c1_01232025 (MMDDYYYY, as in the intrinsics/extrinsics folders).
+_NAME_RE = re.compile(
+    r"(?P<site>[A-Za-z]{4}\d{2})_(?P<cam>[cC]\d+)_(?:.*?_)?(?P<date>\d{8})"
+)
+
+
+def _parse_8digit_date(s):
+    """Parse YYYYMMDD, falling back to MMDDYYYY. Returns datetime or None."""
+    for fmt in ("%Y%m%d", "%m%d%Y"):
+        try:
+            d = datetime.strptime(s, fmt)
+        except ValueError:
+            continue
+        if 1990 <= d.year <= 2100:   # rejects e.g. '01232025' read as year 0123
+            return d
+    return None
+
+
+def _parse_name(path):
+    """Return (site, camera, date) from a filename, or None if no match."""
+    m = _NAME_RE.search(Path(path).stem)
+    if m is None:
+        return None
+    date = _parse_8digit_date(m["date"])
+    if date is None:
+        return None
+    return m["site"].upper(), m["cam"].lower(), date
+
+
+def _index_calibration(folder, tag, dedicated):
+    """
+    Build {(site, camera): [(date, path), ...]} for one calibration type.
+
+    tag       : "IO" or "EO".
+    dedicated : True if `folder` holds only this type (e.g. intrinsics/),
+                so files need no _IO/_EO suffix. False for a shared folder,
+                where only files whose stem ends in _IO / _EO are used.
+    """
+    index = {}
+    for p in sorted(Path(folder).glob("*.y*ml")):
+        stem = p.stem.upper()
+        if "TRANSECT" in stem:
+            continue
+        if not dedicated and not stem.endswith(f"_{tag}"):
+            continue
+        parsed = _parse_name(p)
+        if parsed is None:
+            print(f"  skipping {p.name}: no SITE_cX_DATE pattern")
+            continue
+        site, cam, date = parsed
+        index.setdefault((site, cam), []).append((date, p))
+    return index
+
+
+def _pick_closest(candidates, target, mode):
+    """
+    Choose the calibration closest to `target` from [(date, path), ...].
+
+    mode="prior":   latest calibration on/before target; if none exist,
+                    fall back to the earliest one after (with a note).
+    mode="nearest": smallest absolute day difference (ties -> earlier).
+    Returns (date, path, signed_gap_days) where gap > 0 means the
+    calibration is AFTER the transect date.
+    """
+    if mode == "prior":
+        before = [c for c in candidates if c[0] <= target]
+        if before:
+            d, p = max(before, key=lambda c: c[0])
+        else:
+            d, p = min(candidates, key=lambda c: c[0])
+            print(f"  note: no calibration on/before {target:%Y-%m-%d}; "
+                  f"using later file {p.name}")
+    elif mode == "nearest":
+        d, p = min(candidates, key=lambda c: (abs((c[0] - target).days), c[0]))
+    else:
+        raise ValueError(f"Unknown mode '{mode}' (use 'prior' or 'nearest').")
+    return d, p, (d - target).days
+
+
+def load_nearest_calibration(transect_dir, io_dir=None, eo_dir=None,
+                             mode="prior", max_gap_days=60):
+    """
+    Build one camera per unique (site, camera, date) found among the
+    transect YAMLs in `transect_dir`, pairing each with the IO and EO
+    files closest in date for the same site and camera.
+
+    Every transect file sharing a site/camera/date (transect20, 30, ...)
+    uses the same camera geometry, so they collapse to one footprint.
+
+    Parameters
+    ----------
+    transect_dir : str or Path
+        Folder with *transect*.yaml files.
+    io_dir, eo_dir : str, Path, or None
+        Folders with intrinsics / extrinsics. None = use *_IO.yaml /
+        *_EO.yaml inside transect_dir. A separate folder is treated as
+        holding only that type (no suffix needed).
+    mode : {"prior", "nearest"}
+        Date rule; see _pick_closest().
+    max_gap_days : int or None
+        Print a warning when |gap| exceeds this. None disables warnings.
+
+    Returns
+    -------
+    list of dict
+        Same shape as load_yaml_config(), plus io_file, eo_file,
+        io_gap_days, eo_gap_days for traceability.
+    """
+    transect_dir = Path(transect_dir)
+    io_dir = Path(io_dir) if io_dir else transect_dir
+    eo_dir = Path(eo_dir) if eo_dir else transect_dir
+
+    io_index = _index_calibration(io_dir, "IO", dedicated=io_dir != transect_dir)
+    eo_index = _index_calibration(eo_dir, "EO", dedicated=eo_dir != transect_dir)
+
+    # Unique (site, camera, date) keys from the transect files
+    targets = set()
+    for p in transect_dir.glob("*.y*ml"):
+        if "TRANSECT" in p.stem.upper():
+            parsed = _parse_name(p)
+            if parsed is not None:
+                targets.add(parsed)
+    if not targets:
+        raise FileNotFoundError(f"No *transect*.yaml files found in {transect_dir}")
+
+    cameras = []
+    for site, cam_id, t_date in sorted(targets):
+        key = (site, cam_id)
+        label = f"{site}_{cam_id}_{t_date:%Y%m%d}"
+        missing = [tag for tag, idx in (("IO", io_index), ("EO", eo_index))
+                   if key not in idx]
+        if missing:
+            print(f"WARNING: {label}: no {'/'.join(missing)} file for "
+                  f"{site} {cam_id}; skipping.")
+            continue
+
+        _, io_path, io_gap = _pick_closest(io_index[key], t_date, mode)
+        _, eo_path, eo_gap = _pick_closest(eo_index[key], t_date, mode)
+
+        for tag, path, gap in (("IO", io_path, io_gap), ("EO", eo_path, eo_gap)):
+            if max_gap_days is not None and abs(gap) > max_gap_days:
+                print(f"WARNING: {label}: {tag} {path.name} is {abs(gap)} days "
+                      f"{'after' if gap > 0 else 'before'} the transect date.")
+
+        with open(eo_path, "r") as f:
+            cam = dict(yaml.safe_load(f))
+        with open(io_path, "r") as f:
+            cam["intrinsics"] = yaml.safe_load(f)
+
+        cam.update(id=label, io_file=io_path.name, eo_file=eo_path.name,
+                   io_gap_days=io_gap, eo_gap_days=eo_gap)
+        cameras.append(cam)
+        print(f"{label}: IO={io_path.name} ({io_gap:+d} d), "
+              f"EO={eo_path.name} ({eo_gap:+d} d)")
+
+    return cameras
+
 
 # ----------------------------------------------------------------------
 # MATH: rotation, distortion, ray casting
@@ -526,10 +712,7 @@ def compute_footprint(cam, ground_mode, ground_z, dem, max_range, max_march, dem
             footprint.append(pt)
     return footprint
 
-
-# ----------------------------------------------------------------------
 # QGIS LAYER CREATION
-# ----------------------------------------------------------------------
 
 def create_layers(cameras, ground_mode, ground_z, dem, max_range, max_march, dem_step, points_per_edge, crs):
     poly_layer = QgsVectorLayer(f"Polygon?crs={crs}", "camera_fov_footprints", "memory")
@@ -539,6 +722,10 @@ def create_layers(cameras, ground_mode, ground_z, dem, max_range, max_march, dem
         QgsField("azimuth", QVariant.Double),
         QgsField("tilt", QVariant.Double),
         QgsField("roll", QVariant.Double),
+        QgsField("io_file", QVariant.String),
+        QgsField("eo_file", QVariant.String),
+        QgsField("io_gap_d", QVariant.Int),
+        QgsField("eo_gap_d", QVariant.Int),
     ])
     poly_layer.updateFields()
 
@@ -569,7 +756,10 @@ def create_layers(cameras, ground_mode, ground_z, dem, max_range, max_march, dem
         qgs_pts.append(qgs_pts[0])
         f = QgsFeature()
         f.setGeometry(QgsGeometry.fromPolygonXY([qgs_pts]))
-        f.setAttributes([cam["id"], cam["azimuth"], cam["tilt"], cam["roll"]])
+        # .get() keeps load_yaml_config() cameras (no match info) working
+        f.setAttributes([cam["id"], cam["azimuth"], cam["tilt"], cam["roll"],
+                         cam.get("io_file"), cam.get("eo_file"),
+                         cam.get("io_gap_days"), cam.get("eo_gap_days")])
         poly_feats.append(f)
 
         pf = QgsFeature()
@@ -593,10 +783,15 @@ def create_layers(cameras, ground_mode, ground_z, dem, max_range, max_march, dem
 # ----------------------------------------------------------------------
 
 def main():
-    # cameras = load_yaml_config(YAML_PATH)
+    # Pair each transect date with its closest-dated IO/EO files:
+    cameras = load_nearest_calibration(
+        TRANSECT_DIR, io_dir=IO_DIR, eo_dir=EO_DIR,
+        mode=CALIB_MODE, max_gap_days=MAX_GAP_DAYS,
+    )
 
-    # Uncomment to use separate extrinsic/intrinsic YAML directories instead:
-    cameras = load_split_yaml_files(EXT_PATH, INT_PATH)
+    # Alternatives:
+    # cameras = load_yaml_config(YAML_PATH)                # one combined YAML
+    # cameras = load_split_yaml_files(EXT_PATH, INT_PATH)  # exact-name pairs
 
     dem = None
     if GROUND_MODE == "dem":
