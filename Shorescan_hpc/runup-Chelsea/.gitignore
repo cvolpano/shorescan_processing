@@ -1,0 +1,11 @@
+
+*.tif # DEMs
+*.png
+*.png_original
+*.jpg_original
+*.Identifier 
+*.npz 
+*Boston,_MA* # TWL Regional files
+/DATA/DATA/results
+/DATA/DATA/
+

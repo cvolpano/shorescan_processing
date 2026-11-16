@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# Search for files containing a specific string and copy them to a destination folder
+
+pattern="Dec"
+source_dir="/mnt/f/results_11122026"   # Fixed quotes and path
+dest_dir="/mnt/d/DestinationFolder"    # Use Linux-style paths for Bash
+
+# Ensure destination directory exists
+mkdir -p "$dest_dir"
+
+# Search recursively and copy matching files
+find "$source_dir" -type f -print0 | while IFS= read -r -d '' file; do
+    # Check if file contains the pattern (quiet mode, fixed string)
+    if grep -qF "$pattern" "$file" 2>/dev/null; then
+        cp "$file" "$dest_dir/"
+    fi
+done
+
+echo "✅ Copy complete. Files containing '$pattern' are in: $dest_dir"
